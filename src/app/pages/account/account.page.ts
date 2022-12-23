@@ -283,7 +283,7 @@ export class AccountPage implements OnInit {
     this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
   }
   uploadeSecondFile(){
-    this.chooser.getFile()
+    this.chooser.getFileMetadata()
       .then((file) =>{
         this.firstFileArray = file;
         this.firstFileVal = file.name;
@@ -295,7 +295,7 @@ export class AccountPage implements OnInit {
     });
   }
   uploadeForeFile(){
-    this.chooser.getFile()
+    this.chooser.getFileMetadata()
       .then((file) =>{
         this.foreFileArray = file;
         this.foreFileVal = file.name;
